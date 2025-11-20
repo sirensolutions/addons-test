@@ -3,6 +3,11 @@ permalink: /siren-ai/changelog
 ---
 # Siren AI changelog
 
+## 1.3.3
+
+- Fixed an issue where K9 could not see selected nodes in the serialized graph
+- Fixed an issue where K9 could not see grouped edges in the graph
+
 ## 1.3.2
 
 - Fixed issue where K9 could not see records-as-relations from dataspaces other than HOME
