@@ -1,5 +1,16 @@
 ---
 permalink: /siren-nlp/
+layout: single
+classes:
+  - landing
+  - dark-theme
+sidebar:
+  nav: "plugins_nav"
+github_org: sirensolutions
+github_repo: siren-arrow-java
+toc: true
+toc_sticky: true
+toc_icon: "cog"
 ---
 # Siren NLP
 The Siren NLP plugin provides an Elasticsearch ingestion pipeline with a variety of processors that enriches documents by performing entity extraction.

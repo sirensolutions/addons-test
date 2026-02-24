@@ -1,8 +1,16 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
 ---
 
-@import "{{ site.theme }}";
-@import "colors";
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+//@import "{{ site.theme }}";
+//@import "colors";
 
 * {
   box-sizing: border-box;
@@ -37,7 +45,7 @@ body {
     width: 70%;
     height: auto;
     margin: 20px auto 40px auto;
-    
+
     img {
       max-width: unset;
       width: 100%;
@@ -112,7 +120,7 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: 20px;
+  padding: 0px;
   height: 100%;
 }
 
@@ -120,13 +128,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0px;
   margin-bottom: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #0A0E2B;
+  padding: 30px;
 }
 
 .plugin-icon i {
   font-size: 2rem;
-  color: #003997;
-  background-color: rgba(52, 152, 219, 0.1);
+  color: #0A0E2B;
+  background-color: white;
   padding: 15px;
   border-radius: 50%;
 }
@@ -142,6 +155,7 @@ body {
   color: #7f8c8d;
   font-size: 0.9rem;
   margin: 0;
+  padding: 30px;
   text-align: center;
 }
 
@@ -156,3 +170,28 @@ body {
     flex-basis: 100%;
   }
 }
+
+.container{max-width:1200px;margin:auto}
+.section{padding:60px 0}
+.section-title{border-bottom:2px solid #2f80ed;padding-bottom:10px}
+.muted{color:#9ca3af}
+.small{font-size:.85rem}
+
+.feature-block{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin:40px 0;border-radius: 8px;}
+.feature-text .subtitle{color:#6b7280;font-weight:600}
+.feature-list{list-style:none;padding:0}
+.feature-list li{margin:8px 0;padding-left:18px;position:relative}
+.feature-list li::before{content:"■";color:#003997;position:absolute;left:0}
+
+.plugin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
+.plugin-card{background:#fff;border-radius:12px;padding:0px 0px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.plugin-card .icon{font-size:32px;margin-bottom:10px}
+
+.package-section{background:#f8fafc;padding:80px 0;text-align:center}
+.package-grid{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:30px;align-items:center;margin-top:40px}
+.package-card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.package-main img{width:100%;border-radius:12px}
+
+.btn-primary{background:#003997;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none}
+.btn-outline{border:1px solid #003997;color:#003997;padding:8px 16px;border-radius:6px;text-decoration:none}
+.center{display:inline-block;margin-top:15px}

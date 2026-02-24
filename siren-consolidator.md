@@ -1,5 +1,16 @@
 ---
 permalink: /siren-consolidator/
+layout: single
+classes:
+  - landing
+  - dark-theme
+sidebar:
+  nav: "plugins_nav"
+github_org: sirensolutions
+github_repo: siren-arrow-java
+toc: true
+toc_sticky: true
+toc_icon: "cog"
 ---
 # Siren Consolidator
 This plugin provides an Elasticsearch ingest processor which merges documents into a central index from one or more satellite indices.

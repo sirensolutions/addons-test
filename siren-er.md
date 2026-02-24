@@ -1,5 +1,16 @@
 ---
 permalink: /siren-er/
+layout: single
+classes:
+  - landing
+  - dark-theme
+sidebar:
+  nav: "plugins_nav"
+github_org: sirensolutions
+github_repo: siren-arrow-java
+toc: true
+toc_sticky: true
+toc_icon: "cog"
 ---
 # Siren Entity Resolution
 
@@ -24,3 +35,5 @@ Siren ER is available in the free Siren Community Edition for up to to 10k recor
 
 
 Book a demo or get in touch with us info@siren.io to explore how Siren ER works on your solutions.
+
+

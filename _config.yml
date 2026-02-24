@@ -1,3 +1,7 @@
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
 title: Siren
 description: Siren Plugins
+plugins:
+  - jekyll-remote-include
+
+github_repo: https://github.com/sirensolutions

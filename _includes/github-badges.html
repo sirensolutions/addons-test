@@ -1,0 +1,25 @@
+{% if page.github_org and page.github_repo %}
+<div class="github-badges">
+
+  <a href="https://github.com/{{ page.github_org }}/{{ page.github_repo }}" target="_blank">
+    <img src="https://img.shields.io/github/stars/{{ page.github_org }}/{{ page.github_repo }}?style=flat-square" alt="stars">
+  </a>
+
+  <a href="https://github.com/{{ page.github_org }}/{{ page.github_repo }}/forks" target="_blank">
+    <img src="https://img.shields.io/github/forks/{{ page.github_org }}/{{ page.github_repo }}?style=flat-square" alt="forks">
+  </a>
+
+  <a href="https://github.com/{{ page.github_org }}/{{ page.github_repo }}/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/{{ page.github_org }}/{{ page.github_repo }}?style=flat-square" alt="issues">
+  </a>
+
+  <a href="https://github.com/{{ page.github_org }}/{{ page.github_repo }}/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/github/license/{{ page.github_org }}/{{ page.github_repo }}?style=flat-square" alt="license">
+  </a>
+
+  <a href="https://github.com/{{ page.github_org }}/{{ page.github_repo }}/commits/main" target="_blank">
+    <img src="https://img.shields.io/github/last-commit/{{ page.github_org }}/{{ page.github_repo }}?style=flat-square" alt="last commit">
+  </a>
+
+</div>
+{% endif %}

@@ -1,5 +1,13 @@
 ---
 permalink: /siren-ai
+layout: single
+sidebar:
+  nav: "plugins_nav"
+github_org: sirensolutions
+github_repo: siren-arrow-java
+toc: true
+toc_sticky: true
+toc_icon: "cog"
 ---
 # Siren AI Plugin
 The Siren AI plugin integrates Investigate with various LLM providers enabling users to leverage large language models (LLM) within their Investigate environment.
@@ -34,3 +42,5 @@ Release notes for each version can be found in the [Siren AI changelog]({{ "/sir
 |---------------------|-----------------|
 | 14.7.0 and later    | [1.3.3](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.3.3.zip)<br>[1.3.2](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.3.2.zip)<br>[1.3.1](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.3.1.zip)<br>[1.3.0](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.3.0.zip)<br>[1.2.0](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.2.0.zip)<br>[1.1.0](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.1.0.zip) | 
 | 14.5.2 - 14.6.0     | [1.0.1](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.0.1.zip)<br>[1.0.0](https://download.support.siren.io/plugins/siren-ai/siren-ai-1.0.0.zip) |
+
+
