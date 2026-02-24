@@ -6,6 +6,6 @@ plugins:
 
 github_repo: https://github.com/sirensolutions
 repository: sirensolutions/addons-test
-url: https://addons.siren.io/
+url: "https://addons.siren.io"
 baseurl: "/addons-test" # or "/blog"
 
