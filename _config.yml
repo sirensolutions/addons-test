@@ -5,4 +5,4 @@ plugins:
   - jekyll-remote-include
 
 github_repo: https://github.com/sirensolutions
-repository: /sirensolutions/addons-test
+repository: sirensolutions/addons-test
