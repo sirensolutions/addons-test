@@ -17,12 +17,3 @@
   {% endif %}
   </div>
 {% endif %}
-
-{% assign repo = page.github_repo | default: site.github_repo %}
-{% if repo %}
-  <li class="nav__item">
-    <a href="{{ repo }}" target="_blank" rel="noopener">
-      <i class="fab fa-github"></i> GitHub Repo
-    </a>
-  </li>
-{% endif %}

@@ -19,7 +19,6 @@ gem "github-pages", "~> 228", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-remote-include', :github => 'netrics/jekyll-remote-include'
-  gem 'jekyll_bootstrap5_tabs'
   gem "jekyll-include-cache"
 end
 

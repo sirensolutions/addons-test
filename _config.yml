@@ -3,9 +3,14 @@ title: Siren
 description: Siren Plugins
 plugins:
   - jekyll-remote-include
+  - jekyll-titles-from-headings
 
 github_repo: https://github.com/sirensolutions
 repository: sirensolutions/addons-test
 url: "https://addons.siren.io"
 baseurl: "/addons-test" # or "/blog"
 
+titles_from_headings:
+  enabled:     false
+  strip_title: false
+  collections: false
