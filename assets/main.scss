@@ -178,7 +178,9 @@ body {
 .small{font-size:.85rem}
 
 .feature-block{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin:40px 0;border-radius: 8px;}
+.feature-text{padding:20px;}
 .feature-text .subtitle{color:#6b7280;font-weight:600}
+.feature-media{padding:20px}
 .feature-list{list-style:none;padding:0}
 .feature-list li{margin:8px 0;padding-left:18px;position:relative}
 .feature-list li::before{content:"■";color:#003997;position:absolute;left:0}
