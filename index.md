@@ -52,7 +52,8 @@ nav:
                <p class="plugin-description">Leverage Large Language Models (LLMs) within a Siren Investigate environment</p>
             </a>
          </div>
-      </div><div class="plugin-flex">
+      </div>
+      <div class="plugin-flex">
          <div class="plugin-card">
             <a href="./siren-face-standalone" class="plugin-link">
                <div class="plugin-icon">
@@ -67,7 +68,7 @@ nav:
                <div class="plugin-icon">
                   <i class="fa-solid fa-glasses"></i>
                </div>
-               <h4 class="plugin-title">Siren OCR</h4>
+               <h4 class="plugin-title">Siren Intelligent Document Processing (IDP)</h4>
                <p class="plugin-description">Extract and index text from documents and images for search and analytics.</p>
             </a>
          </div>
@@ -78,6 +79,26 @@ nav:
                </div>
                <h4 class="plugin-title">Siren Case Management</h4>
                <p class="plugin-description">Unify case management and investigative intelligence within Siren.</p>
+            </a>
+         </div>
+      </div>
+      <div class="plugin-flex">
+         <div class="plugin-card">
+            <a href="./siren-er" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-address-card"></i>
+               </div>
+               <h4 class="plugin-title">Siren Entity Tagger</h4>
+               <p class="plugin-description">Accelerating investigations through intelligent entity discovery.</p>
+            </a>
+         </div>
+         <div class="plugin-card">
+            <a href="./siren-ai" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-align-left"></i>
+               </div>
+               <h4 class="plugin-title">Bulk Search</h4>
+               <p class="plugin-description">Search thousands. Surface intelligence instantly.</p>
             </a>
          </div>
       </div>
@@ -131,10 +152,68 @@ nav:
          <div class="plugin-card">
             <a href="./siren-osint" class="plugin-link">
                <div class="plugin-icon">
-                  <i class="fa-solid fa-usd"></i>
+                  <i class="fa-solid fa-fingerprint"></i>
+               </div>
+               <h4 class="plugin-title">Siren Forensic</h4>
+               <p class="plugin-description">Turn raw evidence into decisive intelligence.</p>
+            </a>
+         </div>
+         <div class="plugin-card">
+            <a href="./siren-er" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-spinner"></i>
+               </div>
+               <h4 class="plugin-title">Siren Multivendor Search</h4>
+               <p class="plugin-description">One search. Every system. Instant insight.</p>
+            </a>
+         </div>
+         <div class="plugin-card">
+            <a href="./siren-ai" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-keyboard"></i>
+               </div>
+               <h4 class="plugin-title">Siren Cybersecurity</h4>
+               <p class="plugin-description">Detect threats. Investigate fast. Act with confidence.</p>
+            </a>
+         </div>
+      </div>
+      <div class="plugin-flex">
+         <div class="plugin-card">
+            <a href="./siren-osint" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-star"></i>
+               </div>
+               <h4 class="plugin-title"> Siren Law Enforcement</h4>
+               <p class="plugin-description">Powering faster, smarter investigations from start to finish.</p>
+            </a>
+         </div>
+         <div class="plugin-card">
+            <a href="./siren-er" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-play-circle"></i>
+               </div>
+               <h4 class="plugin-title">Siren Audio & Video Analysis</h4>
+               <p class="plugin-description">See every detail. Hear every lead. Unlock hidden evidence.</p>
+            </a>
+         </div>
+         <div class="plugin-card">
+            <a href="./siren-ai" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-map-marker-alt"></i>
+               </div>
+               <h4 class="plugin-title">Siren SIGINT</h4>
+               <p class="plugin-description">Detect threats. Investigate fast. Act with confidence.</p>
+            </a>
+         </div>
+      </div>
+      <div class="plugin-flex">
+         <div class="plugin-card">
+            <a href="./siren-osint" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-money-bill"></i>
                </div>
                <h4 class="plugin-title">Siren AML</h4>
-               <p class="plugin-description">Unified OSINT intelligence powered by ML anomaly detection, Siren AI, graph analytics, and Siren Insights—turning open-source data into actionable investigative leads.</p>
+               <p class="plugin-description">Expose hidden financial crime before it escalates.</p>
             </a>
          </div>
          <div class="plugin-card">
@@ -143,7 +222,7 @@ nav:
                   <i class="fa-solid fa-circle-dollar-to-slot"></i>
                </div>
                <h4 class="plugin-title">Siren Tax Profiling</h4>
-               <p class="plugin-description">Detect, connect, and unify entities into one resolved identity.</p>
+               <p class="plugin-description">Identify risk, uncover connections, protect revenue.</p>
             </a>
          </div>
          <div class="plugin-card">
@@ -152,7 +231,7 @@ nav:
                   <i class="fa-solid fa-volume-control-phone"></i>
                </div>
                <h4 class="plugin-title">Siren CDR</h4>
-               <p class="plugin-description">Leverage Large Language Models (LLMs) within a Siren Investigate environment</p>
+               <p class="plugin-description">Transform call data into actionable intelligence.</p>
             </a>
          </div>
       </div>

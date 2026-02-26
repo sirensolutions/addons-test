@@ -13,173 +13,85 @@ toc_sticky: true
 toc_icon: "cog"
 ---
 
-# Siren Face Standalone
+# Siren Face Search
 
-Standalone, dockerized face analysis HTTP service using the same TFJS models as the Siren Investigate face plugin.
+## Overview
+**Siren Face Search** brings face-based photo matching into the Siren Investigate experience. It allows investigators and analysts to upload a photo and quickly find visually similar faces across approved image collections, then review results in a familiar Siren workflow.
 
-This service is intended to be called by other apps/services. It has no auth layer by default (run it behind your network controls).
+This module uses **siren-face-standalone** and **siren-face-plugin-light** to support both back-end processing and front-end investigation. The goal is simple: help teams move from an image to actionable leads, without leaving the Siren environment.
 
-## Endpoints
+---
 
-### Health
+## What It Does
+Siren Face Search:
+- Lets an investigation panel search for face matches based on face vectors extracted from uploaded photos
+- Returns ranked match results with helpful context to support review and decision-making
+- Supports processing through back-end pipelines, so face data can be prepared and maintained as part of normal data operations
+- Integrates results into Siren Investigate so analysts can connect findings with other entities, records, and investigative activity
 
-- `GET /healthz`
-	- Always returns `200 {"status":"ok"}` if the process is running.
+At a high level, it compares face vectors (face "signatures") extracted from images to find the closest matches.
 
-- `GET /readyz`
-	- Returns `200 {"status":"ready"}` after models are loaded.
-	- Returns `503 {"status":"starting"}` during startup/model load.
+---
 
-### Face analysis
+## Key Capabilities
 
-#### `POST /v1/faces/analyze`
+### Panel-Based Face Matching
+Users can upload a photo from within Siren and run a face search directly from a panel, making it easy to use during live investigations.
 
-Accepts one image input via either:
-- `multipart/form-data` with a file field named `image`
-- JSON with `{ "url": "https://..." }`
-- JSON with `{ "image_base64": "..." }`
+### Detailed Result Review
+The front-end components present clear, investigation-friendly results that work well alongside other Siren Investigate features.
 
-##### Request options
+### Back-End Pipeline Support
+Face processing can be incorporated into back-end pipelines, enabling organizations to scale how images are processed and kept up to date.
+All data going into the siren that may contain photos is routed to extract Faces and vectorize them for searching.
 
-These can be sent as JSON fields, or as multipart form fields:
+### Investigation Workflow Fit
+Face matches can be reviewed in context, supporting common investigation tasks like Profiling, Link analysys, triage, correlation, and follow-up.
 
-- `minConfidence` (number, default `0.5`)
-- `maxResults` (number, default `10`)
-- `returnDescriptors` (boolean, default `true`)
-- `returnCrops` (boolean, default `false`)
-- `cropFormat` (`"jpg"` | `"png"`, default `"jpg"`)
-- `cropPadding` (pixels, number, default `0`)
+---
 
-##### Response (200)
+## How It Works
+1. A user uploads or selects a photo in Siren
+2. The system extracts a face representation from the image (All faces in photomay be selected)
+3. That representation is compared to existing face representations from available images
+4. The panel displays likely matches, ranked by similarity
+5. Investigators use the results alongside other Siren tools to continue analysis and document findings
 
-JSON:
+---
 
-- `source`: object describing the input (`url`, `file`, or `base64`)
-- `faceCount`: number
-- `faces[]`:
-	- `box`: `{ x, y, width, height }`
-	- `descriptor`: array of 128 floats (only if `returnDescriptors=true`)
-	- `crop`: `{ contentType, base64 }` (only if `returnCrops=true`)
+## Benefits
 
-Example (trimmed):
+### Faster Identification and Triage
+Quickly narrow large image sets down to the most likely matches.
 
-```json
-{
-	"source": { "type": "url", "url": "https://example.com/image.jpg" },
-	"faceCount": 1,
-	"faces": [
-		{
-			"box": { "x": 123, "y": 45, "width": 67, "height": 67 },
-			"descriptor": [0.01, -0.02, 0.03]
-		}
-	]
-}
-```
+### Better Context During Investigations
+Review face match results without losing the broader investigative picture in Siren.
 
-##### Error responses
+### Scales with Operational Workflows
+Use pipelines to support ongoing ingestion and processing, not just one-off searches.
 
-- `400` when the image input is missing/invalid, or a URL fetch fails.
-- `503` if models are not loaded yet.
-- `500` on unexpected processing errors.
+### Consistent User Experience
+Keeps the workflow inside Siren Investigate with results that align with the rest of the platform.
 
-## Running
+---
 
-### Run locally (no Docker)
+## Typical Use Cases
+- Investigating persons of interest from a still image
+- Comparing faces across collections of photos gathered during an investigation
+- Quickly finding potential matches during time-sensitive operational work
+- Supporting review and correlation workflows where images are one of several key data sources
 
-From this directory:
+---
 
-- `npm install`
-- `npm start`
+## Positioning within Siren
+Siren Face Search extends Siren Investigate by adding face-based matching as an investigation-friendly capability, supported by:
+- **siren-face-standalone** for back-end face processing and pipeline integration
+- **siren-face-plugin-light** for front-end components that display and integrate results within the Siren experience. It can server as a proxy to operate **siren-face-standalone** witout cross source issuess and API activation from the browser using SirenAPI
+- The classic **siren-face-plugin** is also availble as a one stop shop for both of all functionalities combined in environment that requires a single node app.
 
-Service listens on `http://localhost:8080`.
+It is designed to complement existing Siren features, helping teams connect image-based leads with the rest of their investigative data.
 
-### Docker: build & run
+---
 
-From repo root.
-
-#### Universal image (recommended)
-
-Build one image that can run fast (native TF) on AVX CPUs and fall back to WASM on older CPUs:
-
-- `docker build -t siren-face-standalone:universal --build-arg INCLUDE_TFJS_NODE=true general/siren-face-standalone`
-
-Run (publish host port 18080 → container 8080):
-
-- `docker run -d --restart unless-stopped --name siren-face-standalone -e TF_MODE=auto -p 18080:8080 siren-face-standalone:universal`
-
-If your host is known to be non-AVX, you may force compatibility mode:
-
-- `docker run -d --restart unless-stopped --name siren-face-standalone -e TF_MODE=wasm -p 18080:8080 siren-face-standalone:universal`
-
-#### Compatibility image (extra safety)
-
-Build an image that removes `@tensorflow/tfjs-node` to avoid native TF crashes on non-AVX hosts:
-
-- `docker build -t siren-face-standalone:compat --build-arg INCLUDE_TFJS_NODE=false general/siren-face-standalone`
-
-Run:
-
-- `docker run -d --restart unless-stopped --name siren-face-standalone -e TF_MODE=auto -p 18080:8080 siren-face-standalone:compat`
-
-### Port mapping notes
-
-- The service listens on container port `8080` by default.
-- You can choose any host port using `-p <HOST_PORT>:8080`.
-- Changing the internal container port is possible but not recommended because the Docker healthcheck assumes port 8080.
-
-## Configuration
-
-Environment variables:
-
-- `TF_MODE`: `auto` (default) | `node` | `wasm`
-	- `auto`: prefers native TF only if CPU exposes `avx` and `@tensorflow/tfjs-node` is available.
-	- If the container exits with code `132` / "Illegal instruction", your host CPU/VM likely lacks `avx`; run with `TF_MODE=wasm` or use the compat image.
-- `PORT` (default `8080`)
-- `MODELS_DIR` (default `/app/models` in Docker)
-- `CONCURRENCY` (default `1`)
-- `LOG_LEVEL` (default `info`)
-- `MAX_BYTES` (default `25MB`): max upload size
-- `BODY_LIMIT` (default `60MB`): max JSON request size (base64 payloads)
-- `LIMIT_INPUT_PIXELS` (default `50_000_000`): protects against huge images
-- `MIN_CONFIDENCE` (default `0.5`)
-- `MAX_RESULTS` (default `10`)
-
-## Curl examples
-
-URL input:
-
-```bash
-curl -sS -X POST http://127.0.0.1:18080/v1/faces/analyze \
-	-H 'content-type: application/json' \
-	-d '{"url":"https://example.com/image.jpg","returnCrops":false}'
-```
-
-Multipart file input (with crops):
-
-```bash
-curl -sS -X POST http://127.0.0.1:18080/v1/faces/analyze \
-	-F 'image=@party.jpg' \
-	-F 'returnCrops=true' \
-	-F 'cropFormat=jpg' \
-	-F 'cropPadding=10'
-```
-
-Base64 input:
-
-```bash
-base64 -w0 party.jpg \
-	| jq -Rs '{image_base64: ., returnCrops: false}' \
-	| curl -sS -X POST http://127.0.0.1:18080/v1/faces/analyze \
-			-H 'content-type: application/json' \
-			-d @-
-```
-
-## Troubleshooting
-
-- Startup takes time: use `GET /readyz` to wait for model load.
-- `Illegal instruction (core dumped)` / exit code `132`:
-	- Your CPU/VM does not expose `avx`.
-	- Use `-e TF_MODE=wasm` or deploy the compat image.
-- Container is healthy but host curl fails:
-	- Confirm you are curling the published host port (e.g. `18080` if you ran `-p 18080:8080`).
-	- Confirm with `docker ps` and `docker port siren-face-standalone`.
+## Summary
+**Siren Face Search** enables teams to run face match queries from within Siren Investigate, using uploaded photos to find similar faces and review results in context. By supporting both back-end processing and front-end investigation workflows, it helps organizations turn images into actionable investigative leads.
