@@ -150,7 +150,7 @@ nav:
         </div>
       <div class="plugin-flex">
          <div class="plugin-card">
-            <a href="./siren-osint" class="plugin-link">
+            <a href="./siren-forensic" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-fingerprint"></i>
                </div>
@@ -159,7 +159,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-er" class="plugin-link">
+            <a href="./siren-vendor" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-spinner"></i>
                </div>
@@ -168,7 +168,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-ai" class="plugin-link">
+            <a href="./siren-cybersecurity" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-keyboard"></i>
                </div>
@@ -179,7 +179,7 @@ nav:
       </div>
       <div class="plugin-flex">
          <div class="plugin-card">
-            <a href="./siren-osint" class="plugin-link">
+            <a href="./siren-le" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-star"></i>
                </div>
@@ -188,7 +188,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-er" class="plugin-link">
+            <a href="./siren-media" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-play-circle"></i>
                </div>
@@ -197,7 +197,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-ai" class="plugin-link">
+            <a href="./siren-sigint" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-map-marker-alt"></i>
                </div>
@@ -208,7 +208,7 @@ nav:
       </div>
       <div class="plugin-flex">
          <div class="plugin-card">
-            <a href="./siren-osint" class="plugin-link">
+            <a href="./siren-aml" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-money-bill"></i>
                </div>
@@ -217,7 +217,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-er" class="plugin-link">
+            <a href="./siren-tax-profilling" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-circle-dollar-to-slot"></i>
                </div>
