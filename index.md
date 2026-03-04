@@ -139,8 +139,8 @@ nav:
     <div class="plugin-section">
       <div class="feature-block" style="background-color: #0A0E2B !important; margin: 15px 15px !important">
           <div class="feature-text" style="color: white; margin-left: 50px">
-            <h1>Siren Accelerators</h1>
-            <p>Mission-ready Siren operational packages designed for law enforcement and national security agencies, combining pre-configured data models, analytics, and investigative workflows to accelerate deployment across complex intelligence and criminal investigation use cases.</p>
+            <h1>Siren Investigation Use Cases</h1>
+            <p>Explore how Siren connects data, resolves identities, visualizes networks with graph link analysis, delivers AI-driven insights and reporting, enables investigative chat, and accelerates operational response.</p>
             <br/>
             <a class="btn-primary" href="#">Learn more</a>
           </div>
