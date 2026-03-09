@@ -30,8 +30,3 @@ Search results can be exported to **CSV** for further analysis, reporting, or sh
 - Control data sources and results per search
 - Export results to CSV
 
----
-
-## Screenshot
-
-![Siren Bulk Search Add-On](/addons-test/assets/images/siren-bulk-01.png)
