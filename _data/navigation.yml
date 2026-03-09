@@ -13,7 +13,7 @@ main:
 
  
 plugins_nav:
-  - title: Siren Investigate Plugins
+  - title: Siren Investigate Add-ons & Plugins
     children:
       - title: "Siren OSINT"
         url: /siren-osint
@@ -23,18 +23,40 @@ plugins_nav:
         url: /siren-ai
       - title: "Siren Face Search "
         url: /siren-face-standalone
-      - title: "Siren OCR "
+      - title: "Siren Intelligent Document Processing (IDP)"
         url: /siren-ocr
-      - title: "Siren Case Management "
+      - title: "Siren Case Management"
         url: /siren-case-management
+      - title: "Siren Entity Tagger"
+        url: /siren-tagger
+      - title: "Bulk Search"
+        url: /siren-bulk
+        
   
 
-  - title: Elasticsearch Plugins
+  - title: Elasticsearch Plugins & Data Extensions
     children:
-      - title: "Siren Consolidator"
-        url: /siren-consolidator
       - title: "Siren NLP"
         url: /siren-nlp
+  
+  - title: Siren Investigation Use Cases
+    children:
+      - title: "Siren Forensic"
+        url: /siren-forensic
+      - title: "Siren Multivendor Search"
+        url: /siren-vendor
+      - title: "Siren Cybersecurity"
+        url: /siren-cybersecurity  
+      - title: "Siren Law Enforcement"
+        url: /siren-le
+      - title: "Siren Audio & Video Analysis"
+        url: /siren-media
+      - title: "Siren SIGINT"
+        url: /siren-sigint
+      - title: "Siren AML Investigation Demo"
+        url: /siren-aml
+      - title: "Siren Tax Profiling"
+        url: /siren-tax-profilling
 
 docs:
   - title: Getting Started

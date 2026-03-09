@@ -84,7 +84,7 @@ nav:
       </div>
       <div class="plugin-flex">
          <div class="plugin-card">
-            <a href="./siren-er" class="plugin-link">
+            <a href="./siren-tagger" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-address-card"></i>
                </div>
@@ -93,7 +93,7 @@ nav:
             </a>
          </div>
          <div class="plugin-card">
-            <a href="./siren-ai" class="plugin-link">
+            <a href="./siren-bulk" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-align-left"></i>
                </div>
