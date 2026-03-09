@@ -16,7 +16,7 @@ toc_icon: "cog"
 
 The **Siren Bulk Search Add-On** enables analysts and investigators to quickly search large sets of identifiers across all available data sources in Siren.
 
-Users simply upload a file containing the items they want to investigate—such as names, email addresses, phone numbers, cryptocurrency addresses, or other identifiers—and the add-on performs fast, highly concurrent searches across the selected datasets.
+Users simply upload a file containing the items they want to investigate-such as names, email addresses, phone numbers, cryptocurrency addresses, or other identifiers-and the add-on performs fast, highly concurrent searches across the selected datasets.
 
 Analysts can choose which data sources to query and control how many results are returned for each identifier. This makes it easy to perform large-scale lookups during investigations, lead generation, or data enrichment tasks.
 
