@@ -117,6 +117,15 @@ nav:
         </div>
       <div class="plugin-flex">
          <div class="plugin-card">
+            <a href="./siren-consolidator" class="plugin-link">
+               <div class="plugin-icon">
+                  <i class="fa-solid fa-database"></i>
+               </div>
+               <h4 class="plugin-title">Siren Consolidator</h4>
+               <p class="plugin-description">Consolidate documents into a central index</p>
+            </a>
+         </div>
+         <div class="plugin-card">
             <a href="./siren-nlp" class="plugin-link">
                <div class="plugin-icon">
                   <i class="fa-solid fa-language"></i>
